@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!-- 
+Launch the smart trigger to initialize the ROS Collision Map.
+
+Normally this would be launched as part of the perception system, this repeatedly
+takes PointCloud snapshots until a message is published on '/collision_map_occ'.
+-->
+<launch>
+
+  <node pkg="pointcloud_snapshotter" type="trigger_collision_map" name="initialize_collision_map" output="screen" >
+    <remap from="snapshot_service" to="/xtion_snapshotter/snapshot"/> <!-- the trigger Service -->
+    <remap from="collision_map_output" to="/collision_map_occ"/> <!-- check output on this topic -->
+  </node>
+
+</launch>

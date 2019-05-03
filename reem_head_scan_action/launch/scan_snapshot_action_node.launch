@@ -1,0 +1,12 @@
+<launch>
+
+  <!-- Head scan table Action Server -->
+  <!-- (must be launched in same namespace as desired follow_joint_trajectory action) -->
+
+  <group ns="head_traj_controller"> 
+    <node name="reem_scan_table_action" pkg="reem_head_scan_action" type="scan_snapshot_action_node" respawn="true" output="screen">
+      <remap from="snapshot_service" to="/xtion_snapshotter/snapshot"/>
+    </node>
+  </group>
+
+</launch>

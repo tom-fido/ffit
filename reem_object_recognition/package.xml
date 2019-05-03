@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <name>reem_object_recognition</name>
+  <version>0.1.0</version>
+  <description>The reem_object_recognition package</description>
+  <maintainer email="bence.magyar@pal-robotics.com">Bence Magyar</maintainer>
+  <license>BSD</license>
+  <url type="website">http://www.pal-robotics.com/</url>
+  <author email="bence.magyar@pal-robotics.com">Bence Magyar</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>object_recognition_ros</build_depend>
+  <build_depend>object_recognition_tabletop</build_depend>
+</package>

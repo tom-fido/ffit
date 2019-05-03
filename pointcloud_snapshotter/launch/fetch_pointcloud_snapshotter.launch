@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- 
+Launch PointCloud snapshotter node
+-->
+<launch>
+
+  <node pkg="pointcloud_snapshotter" type="pointcloud_snapshotter" name="xtion_snapshotter" output="screen">
+    <remap from="point_cloud_in"   to="/head_camera/depth_registered/points"/>
+    <remap from="point_cloud_out"  to="/head_camera/depth_registered/points_snapshot"/>
+
+    <param name="auto_start" value="true" /> <!-- Enable the PointCloud output from start -->
+  </node>
+
+</launch>

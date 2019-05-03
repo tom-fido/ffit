@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- 
+Load Rviz visualization tool 
+with PointCloud2 topic '/head_mount_xtion/depth_registered/points_snapshot'
+-->
+<launch>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pointcloud_snapshotter)/rviz/snapshotter.vcg" required="true" />
+
+</launch> 
+

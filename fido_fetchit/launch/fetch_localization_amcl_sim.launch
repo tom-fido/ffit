@@ -1,0 +1,25 @@
+<launch>
+
+  <!-- Localization using AMCL (Adaptive Monte Carlo Localization) -->
+
+
+  <!-- FetchIt Challenge environment in Gazebo simulation, with open door, 5cm resolution -->
+  <arg name="map_file" default="$(find fido_fetchit)/maps/gazebo_sim_map1/gazebo_sim_map1.yaml" />
+
+
+  <!-- Publish the static map image as an 'OccupancyGrid' on topic '/map' -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+
+  <!-- Launch AMCL -->
+  <arg name="scan_topic"      default="/base_scan" />
+  <arg name="amcl_map_topic"  default="/map" />
+  <arg name="use_map_topic"   default="false" /> <!-- subscribe to the map topic instead of making service call to get map -->
+  <node pkg="amcl" type="amcl" name="amcl">
+    <remap from="scan" to="$(arg scan_topic)" />
+    <remap from="map" to="$(arg amcl_map_topic)" />
+    <param name="use_map_topic"  value="$(arg use_map_topic)" />
+    <rosparam file="$(find fetch_navigation)/config/amcl.yaml" command="load" />
+  </node>
+
+</launch>

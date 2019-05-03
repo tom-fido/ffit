@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+
+<!-- Test1: qualify for FetchIt Challenge -->
+<sdf version="1.4">
+  <world name="default">
+
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>1.67071 5.85726 3.69541 8.68927e-17 0.877798 -1.32381</pose>
+      </camera>
+    </gui>
+
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Table 1 - behind the robot -->
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table1</name>
+      <pose>-3 5 0 0 0 1.57</pose>
+    </include>
+
+
+    <!-- Table 2 - forward-left of robot, top is 0.91m square -->
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table2</name>
+      <pose>4.05 3 0 0 0 1.57</pose>
+    </include>
+
+
+    <!-- Object on table 2 -->
+    <include>
+      <uri>model://demo_cube</uri>
+      <pose>3.8 3.15 1.83 0 0 0</pose> <!-- orig height was 0.83 -->
+    </include>
+    <include>
+      <name>bin1</name>
+      <uri>model://rect_bin_orange</uri>
+      <pose>3.8 3.15 1.0 0 0 0</pose>
+    </include>
+
+
+
+    <!-- 3 x tables on left side -->
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table3</name>
+      <pose>3.0 3.95 0 0 0 1.57</pose>
+    </include>
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table4</name>
+      <pose>2.0 3.95 0 0 0 1.57</pose>
+    </include>
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table5</name>
+      <pose>1.0 3.95 0 0 0 1.57</pose>
+    </include>
+
+
+    <include>
+      <name>gearbox_bottom</name>
+      <uri>model://gearbox_bottom</uri>
+      <pose>2.7 3.7 1.0 0 0 0.5</pose>
+    </include>
+
+
+
+    <include>
+      <name>bin2</name>
+      <uri>model://rect_bin_green</uri>
+      <pose>2.0 3.7 1.0 0 0 1.57</pose>
+    </include>
+
+
+
+
+    <!-- table on right side -->
+    <include>
+      <uri>model://cafe_table</uri>
+      <name>table7</name>
+      <pose>3.0 2.05 0 0 0 1.57</pose>
+    </include>
+
+
+
+
+
+  </world>
+</sdf>

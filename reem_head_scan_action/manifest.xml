@@ -1,0 +1,35 @@
+<package>
+  <description brief="reem_head_scan_action">
+An Action Server to move the head and take PointCloud snapshots
+
+Used as part of the perception system, to provide an easy method to request the robot to scan an area and aggregate the snapshots of PointCloud data e.g. scanning a table with head-mounted RGBD sensor and building a Collision Map
+
+The same behaviour could be accomplished be repeatedly calling the Point Head Action Server with some x-y co-ordinates, but this node offers a specific "scan the table" behaviour.
+
+When requested, the robot will perform the following hard-coded behaviour:
+1. look straight ahead, snapshot
+2. look left, snapshot
+3. look right, snapshot
+4. look down-left, snapshot
+5. look down-right, snapshot
+6. look down-center, snapshot
+  </description>
+  <author>David Butterworth</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/reem_head_scan_action</url>
+
+  <depend package="geometry_msgs" />
+  <depend package="trajectory_msgs" />
+  <depend package="sensor_msgs" />
+  <depend package="pr2_controllers_msgs" />
+
+  <depend package="roscpp" />
+  <depend package="actionlib" />
+
+  <depend package="control_msgs" />
+
+
+</package>
+
+

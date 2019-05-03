@@ -1,0 +1,25 @@
+<launch>
+
+  <!-- Start navigation -->
+  <!-- include file="$(find fetch_gazebo_demo)/launch/fetch_nav.launch" / -->
+
+  <!-- MoveBase, AMCL and Tilt Head -->
+
+  <include file="$(find fetch_navigation)/launch/fetch_nav.launch" >
+    <arg name="map_file" value="$(find fetch_gazebo_demo)/maps/test_zone.yaml" />
+  </include>
+
+
+
+  <!-- Start MoveIt -->
+  <include file="$(find fetch_gazebo_world_grasping)/launch/moveit_config_move_group.launch" >  <!-- was from fetch_moveit_config -->
+    <arg name="info" value="true" /> <!-- publish grasp markers -->
+    <arg name="allow_active_sensing" value="true" /> <!-- Add OctoMap to Planning Scene -->
+  </include>
+
+
+</launch>
+
+
+
+

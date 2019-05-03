@@ -1,0 +1,26 @@
+<launch>
+
+  <!-- Fetch robot in an empty world -->
+
+  <arg name="robot" default="fetch"/>
+  <arg name="debug" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+
+  <!-- Start Gazebo with specified world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="debug" value="$(arg debug)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="headless" value="$(arg headless)"/>
+  </include>
+
+  <!-- Spawn Fetch robot -->
+  <include file="$(find fetch_gazebo_world_grasping)/launch/include/$(arg robot).launch.xml"> <!-- Custom, because yaw arg doesn't exist in Indigo package -->
+    <arg name="x" value="0.0" />
+    <arg name="y" value="0.0" />
+    <arg name="yaw" value="0.0" />
+  </include>
+
+</launch>

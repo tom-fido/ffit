@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.4">
+  <model name="rect_bin_green">
+
+    <static>false</static>
+
+    <link name="link">
+
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://rect_bin_green/meshes/dropbox.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://rect_bin_green/meshes/dropbox.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+        </material>
+      </visual>
+
+    </link>
+
+  </model>
+</sdf>

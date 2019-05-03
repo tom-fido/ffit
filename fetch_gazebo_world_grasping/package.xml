@@ -1,0 +1,21 @@
+<package>
+  <name>fetch_gazebo_world_grasping</name>
+  <version>0.0.1</version>
+  <description>
+    Gazebo package for Fetch.
+  </description>
+  <author>Michael Ferguson</author>
+  <maintainer email="mferguson@fetchrobotics.com">Michael Ferguson</maintainer>
+  <license>BSD</license>
+  <url>http://ros.org/wiki/fetch_gazebo_world_grasping</url>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>gazebo_ros</build_depend>
+  <build_depend>fetch_gazebo</build_depend>
+
+  <run_depend>fetch_description</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>xacro</run_depend>
+
+</package>

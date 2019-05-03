@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>fetchpy</name>
+
+  <version>0.1.0</version>
+  <description>todo</description>
+  <maintainer email="todo@todo.todo">todo</maintainer>
+  <license>TODO</license> <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <!-- <url type="website">http://wiki.ros.org/fido_fetchit</url> -->
+  <!-- <author email="jane.doe@example.com">Jane Doe</author> -->
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <exec_depend>rospy</exec_depend>
+
+  <!-- custom controller for base, only tested in Gazebo -->
+  <!--
+  <build_depend>fetch_base_controller</build_depend>
+  <exec_depend>fetch_base_controller</exec_depend>
+  -->
+
+  <exec_depend>actionlib</exec_depend>
+  <exec_depend>control_msgs</exec_depend>
+  <exec_depend>gazebo_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>move_base_msgs</exec_depend>
+  <exec_depend>moveit_commander</exec_depend>
+  <exec_depend>moveit_msgs</exec_depend>
+  <exec_depend>moveit_python</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>trajectory_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
+
+  <exec_depend>python-numpy</exec_depend>
+
+  <export>
+  </export>
+
+</package>
